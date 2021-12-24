@@ -27,16 +27,16 @@ public class DishService {
 	}
 	public Boolean add(DishDto dish) {
 		Dish d = dishMapper.dtoToEntity(dish);
-//		try {
-//			if(!dishRepository.isExist(dish)) {
-//				dish.save(d);
-//				return true ;
-//			}else {
-//				return false ;
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-		return null ;
+		try {
+			if(!dishRepository.isExist(dish)) {
+				dish.save(d);
+				return true ;
+			}else {
+				return false ;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+//		return null ;
 	}
 }
