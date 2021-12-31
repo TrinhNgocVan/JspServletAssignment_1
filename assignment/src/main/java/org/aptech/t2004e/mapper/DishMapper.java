@@ -1,6 +1,6 @@
 package org.aptech.t2004e.mapper;
 
-import org.aptech.t2004e.Dto.DishDto;
+import org.aptech.t2004e.dto.DishDto;
 import org.aptech.t2004e.entity.Dish;
 import org.mapstruct.Mapper;
 

@@ -19,7 +19,8 @@
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <module-common.version>0.0.1</module-common.version>
          <lombok.version>1.18.22</lombok.version>
-         <mysql_connector.version>8.0.27</mysql_connector.version>        
+         <mysql_connector.version>8.0.27</mysql_connector.version> 
+         <sitemesh.version>3.0.1</sitemesh.version>       
     </properties>
 
     <dependencies>
@@ -58,16 +59,16 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.aptech.t2004e</groupId>
-            <artifactId>module-common</artifactId>
-            <version>${JPARepository.version}</version>
-            <scope>provided</scope>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.aptech.t2004e</groupId> -->
+<!--             <artifactId>module-common</artifactId> -->
+<!--             <version>${JPARepository.version}</version> -->
+<!--             <scope>provided</scope> -->
+<!--         </dependency> -->
         <dependency>
             <groupId>org.keysoft.entityFramework</groupId>
             <artifactId>JPARepository</artifactId>
-            <version>${module-common.version}</version>
+            <version>${JPARepository.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -87,6 +88,16 @@
     		<artifactId>jstl</artifactId>
     		<version>1.2</version>
 		</dependency>
+		<dependency>
+		    <groupId>org.sitemesh</groupId>
+		    <artifactId>sitemesh</artifactId>
+		    <version>${sitemesh.version}</version>
+		</dependency>
+		<dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.9.11</version>
+        </dependency>
     </dependencies>
 
     <build>

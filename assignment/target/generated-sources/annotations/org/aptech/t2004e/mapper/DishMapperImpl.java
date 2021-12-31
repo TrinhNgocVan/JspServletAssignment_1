@@ -1,12 +1,13 @@
 package org.aptech.t2004e.mapper;
 
-import org.aptech.t2004e.Dto.DishDto;
+import org.aptech.t2004e.dto.DishDto;
+import org.aptech.t2004e.dto.DishDto.DishDtoBuilder;
 import org.aptech.t2004e.entity.Dish;
 
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-12-24T21:04:23+0700",
+    date = "2021-12-31T17:30:59+0700",
     comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 1.4.0.v20210708-0430, environment: Java 16.0.2 (Oracle Corporation)"
 )
 */
@@ -18,20 +19,20 @@ public class DishMapperImpl implements DishMapper {
             return null;
         }
 
-        DishDto dishDto = new DishDto();
+        DishDtoBuilder dishDto = DishDto.builder();
 
-        dishDto.setCategoryCode( dish.getCategoryCode() );
-        dishDto.setCode( dish.getCode() );
-        dishDto.setDescription( dish.getDescription() );
-        dishDto.setId( dish.getId() );
-        dishDto.setImageUrl( dish.getImageUrl() );
-        dishDto.setName( dish.getName() );
-        dishDto.setPrice( dish.getPrice() );
-        dishDto.setStarteddate( dish.getStarteddate() );
-        dishDto.setStatus( dish.getStatus() );
-        dishDto.setUpdatedDate( dish.getUpdatedDate() );
+        dishDto.categoryCode( dish.getCategoryCode() );
+        dishDto.code( dish.getCode() );
+        dishDto.description( dish.getDescription() );
+        dishDto.id( dish.getId() );
+        dishDto.imageUrl( dish.getImageUrl() );
+        dishDto.name( dish.getName() );
+        dishDto.price( dish.getPrice() );
+        dishDto.starteddate( dish.getStarteddate() );
+        dishDto.status( dish.getStatus() );
+        dishDto.updatedDate( dish.getUpdatedDate() );
 
-        return dishDto;
+        return dishDto.build();
     }
 
     @Override
